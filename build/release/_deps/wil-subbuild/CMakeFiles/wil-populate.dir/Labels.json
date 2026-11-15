@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate-complete.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-build.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-configure.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-download.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-install.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-mkdir.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-patch.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-test.rule"
+		},
+		{
+			"file" : "D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"wil-populate"
+		],
+		"name" : "wil-populate"
+	}
+}

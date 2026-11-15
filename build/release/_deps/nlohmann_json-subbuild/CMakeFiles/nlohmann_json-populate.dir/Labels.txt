@@ -1,0 +1,14 @@
+# Target labels
+ nlohmann_json-populate
+# Source files and their labels
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/CMakeFiles/nlohmann_json-populate
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/CMakeFiles/nlohmann_json-populate.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/CMakeFiles/nlohmann_json-populate-complete.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-build.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-configure.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-download.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-install.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-mkdir.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-patch.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-test.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/src/nlohmann_json-populate-stamp/nlohmann_json-populate-update.rule

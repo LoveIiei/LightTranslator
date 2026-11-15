@@ -1,0 +1,64 @@
+#pragma code_page(65001)
+#include <windows.h>
+#include "resource.h"
+
+IDI_APP         ICON "app.ico"
+IDI_TRAY_LIGHT  ICON "tray-light.ico"
+IDI_TRAY_DARK   ICON "tray-dark.ico"
+
+IDD_SETTINGS DIALOGEX 0, 0, 270, 236
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "LightTranslate Settings"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT           "", IDC_INTRO, 10, 8, 250, 26
+
+    LTEXT           "Provider", -1, 10, 42, 62, 8
+    COMBOBOX        IDC_PROVIDER, 76, 40, 184, 120, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "API key", -1, 10, 61, 62, 8
+    EDITTEXT        IDC_APIKEY, 76, 58, 140, 14, ES_PASSWORD | ES_AUTOHSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Test", IDC_TEST, 220, 58, 40, 14
+    LTEXT           "", IDC_TEST_RESULT, 76, 75, 184, 18
+
+    LTEXT           "Translate from", -1, 10, 100, 62, 8
+    COMBOBOX        IDC_SOURCE, 76, 98, 184, 200, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Translate to", -1, 10, 118, 62, 8
+    COMBOBOX        IDC_TARGET, 76, 116, 184, 200, CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+
+    LTEXT           "Hotkey", -1, 10, 139, 62, 8
+    AUTOCHECKBOX    "Win +", IDC_HOTKEY_WIN, 76, 138, 34, 10
+    CONTROL         "", IDC_HOTKEY, "msctls_hotkey32", WS_BORDER | WS_TABSTOP, 114, 136, 146, 14
+    LTEXT           "", IDC_HOTKEY_STATUS, 76, 153, 184, 18
+
+    AUTOCHECKBOX    "Start with Windows", IDC_AUTOSTART, 76, 175, 184, 10
+    AUTOCHECKBOX    "Allow clipboard fallback (Ctrl+C) for apps that can't be read directly",
+                    IDC_FALLBACK, 76, 189, 184, 18, BS_MULTILINE | BS_TOP
+
+    DEFPUSHBUTTON   "Save", IDOK, 156, 214, 50, 14
+    PUSHBUTTON      "Cancel", IDCANCEL, 210, 214, 50, 14
+END
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     1,0,0,0
+PRODUCTVERSION  1,0,0,0
+FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
+FILEFLAGS       0
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription",  "LightTranslate"
+            VALUE "ProductName",      "LightTranslate"
+            VALUE "FileVersion",      "1.0.0.0"
+            VALUE "ProductVersion",   "1.0.0.0"
+            VALUE "OriginalFilename", "LightTranslate.exe"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 0x04B0
+    END
+END

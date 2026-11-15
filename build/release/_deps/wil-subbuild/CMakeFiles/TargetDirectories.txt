@@ -1,0 +1,3 @@
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate.dir
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/edit_cache.dir
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/rebuild_cache.dir

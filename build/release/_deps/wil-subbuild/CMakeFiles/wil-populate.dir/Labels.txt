@@ -1,0 +1,14 @@
+# Target labels
+ wil-populate
+# Source files and their labels
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/CMakeFiles/wil-populate-complete.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-build.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-configure.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-download.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-install.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-mkdir.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-patch.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-test.rule
+D:/CPP_Code/LightTranslate/build/release/_deps/wil-subbuild/wil-populate-prefix/src/wil-populate-stamp/wil-populate-update.rule

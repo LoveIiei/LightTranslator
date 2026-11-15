@@ -1,0 +1,5 @@
+D:/CPP_Code/LightTranslate/build/release/CMakeFiles/translator.dir
+D:/CPP_Code/LightTranslate/build/release/CMakeFiles/translator_tests.dir
+D:/CPP_Code/LightTranslate/build/release/CMakeFiles/test.dir
+D:/CPP_Code/LightTranslate/build/release/CMakeFiles/edit_cache.dir
+D:/CPP_Code/LightTranslate/build/release/CMakeFiles/rebuild_cache.dir
