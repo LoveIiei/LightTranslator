@@ -3,9 +3,21 @@
 A small tray app for Windows 11: select text in any application, press a hotkey
 (default **Win + Alt + T**), and a translation pops up next to the caret.
 
-- Single portable `.exe` (~0.5 MB), no installer, no runtime redistributable.
+- Single `.exe` (~0.5 MB), no runtime redistributable. Installer or portable zip.
 - Providers: **DeepL** and **Google Cloud Translation (Basic, v2)** — bring your own API key.
 - Idle cost: three sleeping threads, no timers, no polling.
+
+## Install
+
+Download from [Releases](https://github.com/LoveIiei/LightTranslator/releases):
+
+- **`LightTranslate-<version>-setup.exe`** — installs for the current user only (no admin prompt)
+  into `%LOCALAPPDATA%\Programs\LightTranslate`, adds a Start menu entry and optionally starts
+  with Windows. Running a newer setup upgrades in place and keeps your settings.
+- **`LightTranslate-<version>-portable-x64.zip`** — just the exe; run it from anywhere.
+
+The binaries are not code-signed, so SmartScreen may show "Windows protected your PC" on first
+run: click *More info → Run anyway*. `SHA256SUMS.txt` lists the checksums of the release files.
 
 ## Build
 
@@ -22,6 +34,23 @@ ctest --preset release
 Output: `build\release\LightTranslate.exe`. WIL, nlohmann/json and doctest are fetched (pinned tags) on the first configure.
 
 `tools\make-icons.ps1` regenerates the `.ico` files in `res\`.
+
+### Release packages
+
+`powershell -ExecutionPolicy Bypass -File tools\build-release.ps1` (any PowerShell window; needs
+[Inno Setup 6](https://jrsoftware.org/isinfo.php), e.g. `winget install JRSoftware.InnoSetup`)
+builds into `build\dist`, runs the tests and writes the installer, portable zip and
+`SHA256SUMS.txt` to `dist\`. The installer script is `installer\LightTranslate.iss`.
+
+To publish a GitHub release: bump `VERSION` in `project()` in `CMakeLists.txt` (it feeds the exe's
+version resource and the installer), commit, then push a matching tag:
+
+```bat
+git tag v1.0.1
+git push origin v1.0.1
+```
+
+`.github/workflows/release.yml` then builds, tests and creates the release with all three files attached.
 
 ### Smart App Control / SmartScreen
 
@@ -101,6 +130,11 @@ Paste the key in **Settings** (tray icon → *Settings…*), press **Test**, the
 | `PopupPinned`, `HasPinPosition`, `PinX`, `PinY` | pinned popup state |
 
 ## Uninstall
+
+**Installed:** *Settings → Apps → Installed apps → LightTranslate → Uninstall*. It closes the app,
+removes autostart, and asks whether to also delete your settings and saved API keys.
+
+**Portable:**
 
 1. Quit from the tray icon and delete `LightTranslate.exe`.
 2. Delete the registry key `HKCU\Software\LightTranslate`

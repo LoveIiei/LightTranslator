@@ -72,6 +72,9 @@ add_executable(translator WIN32
     res/app.rc
     res/app.manifest)   # merged into the embedded manifest by the linker
 set_target_properties(translator PROPERTIES OUTPUT_NAME "LightTranslate")
+# Version resource: generated from project(VERSION) so the exe, installer and release tag agree.
+configure_file(res/version.h.in ${CMAKE_CURRENT_BINARY_DIR}/generated/version.h @ONLY)
+target_include_directories(translator PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/generated)
 target_link_libraries(translator PRIVATE lt_options
     user32 gdi32 shell32 ole32 oleaut32 uuid comctl32 dwmapi winhttp advapi32
     d3d11 dxgi d2d1 dwrite dcomp

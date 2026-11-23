@@ -13,14 +13,23 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/debug",
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug" }
+    },
+    {
+      "name": "dist",
+      "description": "Release build used for packaging (separate folder, so a running dev build never blocks it)",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/dist",
+      "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
     }
   ],
   "buildPresets": [
     { "name": "release", "configurePreset": "release" },
-    { "name": "debug", "configurePreset": "debug" }
+    { "name": "debug", "configurePreset": "debug" },
+    { "name": "dist", "configurePreset": "dist" }
   ],
   "testPresets": [
     { "name": "release", "configurePreset": "release", "output": { "outputOnFailure": true } },
-    { "name": "debug", "configurePreset": "debug", "output": { "outputOnFailure": true } }
+    { "name": "debug", "configurePreset": "debug", "output": { "outputOnFailure": true } },
+    { "name": "dist", "configurePreset": "dist", "output": { "outputOnFailure": true } }
   ]
 }

@@ -1,0 +1,36 @@
+# Push a tag that matches the CMake version (e.g. v1.0.1) to build, test and publish a release.
+# "Run workflow" (manual) builds the same files as a downloadable artifact without publishing.
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Inno Setup
+        run: choco install innosetup --no-progress -y
+
+      - name: Build, test and package
+        shell: pwsh
+        run: ./tools/build-release.ps1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LightTranslate
+          path: dist/*
+
+      - name: Publish GitHub release
+        if: github.ref_type == 'tag'
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create $env:GITHUB_REF_NAME (Get-ChildItem dist -File).FullName --title "LightTranslate $env:GITHUB_REF_NAME" --generate-notes

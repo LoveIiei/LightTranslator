@@ -1,6 +1,7 @@
 #pragma code_page(65001)
 #include <windows.h>
 #include "resource.h"
+#include "version.h"
 
 IDI_APP         ICON "app.ico"
 IDI_TRAY_LIGHT  ICON "tray-light.ico"
@@ -39,8 +40,8 @@ BEGIN
 END
 
 VS_VERSION_INFO VERSIONINFO
-FILEVERSION     1,0,0,0
-PRODUCTVERSION  1,0,0,0
+FILEVERSION     LT_VERSION_MAJOR,LT_VERSION_MINOR,LT_VERSION_PATCH,0
+PRODUCTVERSION  LT_VERSION_MAJOR,LT_VERSION_MINOR,LT_VERSION_PATCH,0
 FILEFLAGSMASK   VS_FFI_FILEFLAGSMASK
 FILEFLAGS       0
 FILEOS          VOS_NT_WINDOWS32
@@ -52,8 +53,9 @@ BEGIN
         BEGIN
             VALUE "FileDescription",  "LightTranslate"
             VALUE "ProductName",      "LightTranslate"
-            VALUE "FileVersion",      "1.0.0.0"
-            VALUE "ProductVersion",   "1.0.0.0"
+            VALUE "FileVersion",      LT_VERSION_STR
+            VALUE "ProductVersion",   LT_VERSION_STR
+            VALUE "LegalCopyright",   "https://github.com/LoveIiei/LightTranslator"
             VALUE "OriginalFilename", "LightTranslate.exe"
         END
     END
